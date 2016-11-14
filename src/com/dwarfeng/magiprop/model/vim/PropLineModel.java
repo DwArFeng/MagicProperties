@@ -7,35 +7,35 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.WeakHashMap;
 
-import com.dwarfeng.magiprop.model.struct.PropLabel;
-import com.dwarfeng.magiprop.view.obv.PropLabelObverser;
+import com.dwarfeng.magiprop.model.struct.PropLine;
+import com.dwarfeng.magiprop.view.obv.PropLineObverser;
 
 /**
  * 属性标签模型。
  * @author  DwArFeng
  * @since 1.8
  */
-public final class PropLabelModel {
+public final class PropLineModel {
 	
-	private final Set<PropLabelObverser> obversers = Collections.newSetFromMap(new WeakHashMap<>());
+	private final Set<PropLineObverser> obversers = Collections.newSetFromMap(new WeakHashMap<>());
 	
-	private final List<PropLabel> list = new ArrayList<>();
+	private final List<PropLine> list = new ArrayList<>();
 	
 	/**
 	 * 新实例。
 	 */
-	public PropLabelModel() {}
+	public PropLineModel() {}
 	
 	/**
 	 * 向模型中添加指定的属性标签。
 	 * @param propLabel 指定的属性标签。
 	 * @throws NullPointerException 入口参数为 <code>null</code>。
 	 */
-	public void add(PropLabel propLabel){
+	public void add(PropLine propLabel){
 		Objects.requireNonNull(propLabel, "入口参数 propLabel 不能为 null。");
 		int index = list.size();
 		list.add(propLabel);
-		for(PropLabelObverser obverser : obversers){
+		for(PropLineObverser obverser : obversers){
 			if(Objects.nonNull(obverser)){
 				obverser.fireAdded(index, propLabel);
 			}
@@ -49,10 +49,10 @@ public final class PropLabelModel {
 	 * @throws NullPointerException 入口参数为 null。
 	 * @throws IndexOutOfBoundsException 序号越界。
 	 */
-	public void add(int index, PropLabel propLabel){
+	public void add(int index, PropLine propLabel){
 		Objects.requireNonNull(propLabel, "入口参数 propLabel 不能为 null。");
 		list.add(index, propLabel);
-		for(PropLabelObverser obverser : obversers){
+		for(PropLineObverser obverser : obversers){
 			if(Objects.nonNull(obverser)){
 				obverser.fireAdded(index, propLabel);
 			}
@@ -66,7 +66,7 @@ public final class PropLabelModel {
 	 */
 	public void remove(int index){
 		list.remove(index);
-		for(PropLabelObverser obverser : obversers){
+		for(PropLineObverser obverser : obversers){
 			if(Objects.nonNull(obverser)){
 				obverser.fireRemoved(index);
 			}
@@ -78,7 +78,7 @@ public final class PropLabelModel {
 	 */
 	public void clear(){
 		list.clear();
-		for(PropLabelObverser obverser : obversers){
+		for(PropLineObverser obverser : obversers){
 			if(Objects.nonNull(obverser)){
 				obverser.fireCleared();
 			}

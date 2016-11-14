@@ -6,7 +6,7 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-public class PropLabelPanel extends JPanel {
+public class PropLinePanel extends JPanel {
 	
 	private final JList labelList;
 	private final JList indexList;
@@ -14,7 +14,7 @@ public class PropLabelPanel extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public PropLabelPanel() {
+	public PropLinePanel() {
 
 		labelList = new JList();
 		indexList = new JList();
