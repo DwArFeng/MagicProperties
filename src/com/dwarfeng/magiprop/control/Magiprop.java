@@ -83,6 +83,7 @@ public final class Magiprop {
 		if(runtimeStatus != RuntimeStatus.NOT_START){
 			throw new IllegalStateException("程序已经启动");
 		}
+		
 	}
 	
 	/**

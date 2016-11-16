@@ -23,6 +23,18 @@ public interface PropLineObverser {
 	public void fireRemoved(int index);
 	
 	/**
+	 * 通知视图移除某一片区域的属性标签。
+	 * <p> 该方法的默认实现效率低下，为了提高效率，请重写该方法。
+	 * @param fromIndex 开始的下标。
+	 * @param toIndex 结束的下标。
+	 */
+	public default void fireRemoved(int fromIndex, int toIndex){
+		for(int i = fromIndex ; i <= toIndex ; i ++){
+			fireRemoved(fromIndex);
+		}
+	}
+	
+	/**
 	 * 通知视图更改属性标签。
 	 * @param index 指定的序号。
 	 * @param propLabel 指定的属性标签。

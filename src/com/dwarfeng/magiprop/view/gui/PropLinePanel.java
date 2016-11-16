@@ -6,7 +6,13 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-public class PropLinePanel extends JPanel {
+/**
+ * 属性行面板。
+ * <p> 该面板用来显示属性文件的属性行。
+ * @author  DwArFeng
+ * @since 1.8
+ */
+public final class PropLinePanel extends JPanel {
 	
 	private final JList labelList;
 	private final JList indexList;
