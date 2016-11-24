@@ -1,18 +1,16 @@
 package com.dwarfeng.magiprop.model.struct;
 
-import java.util.Objects;
-
 /**
  * 属性行。
  * <p> 属性字段是 .properties 文件中的行。比如：
- * <blockquote>
  * <code>
+ * <pre>
  * #注释行<br>
  * Properties_0 = 123<br>
  * （空行）<br>
  * Properties_1 = 456
+ * </pre>
  * </code>
- * </blockquote>
  * @author DwArFeng
  * @since 1.8
  */
@@ -76,7 +74,6 @@ public interface PropLine {
 	
 	/**
 	 * 重写该方法，以便于直观的表示对象，通常，可重写为：
-	 * <blockquote>
 	 * <code>
 	 * <pre>
 	 * public String toString(){
@@ -84,7 +81,6 @@ public interface PropLine {
 	 * }
 	 * </pre>
 	 * </code>
-	 * </blockquote>
 	 * @return 返回该对象的文本表示。
 	 */
 	@Override

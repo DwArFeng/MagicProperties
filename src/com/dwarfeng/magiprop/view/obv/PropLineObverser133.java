@@ -7,7 +7,7 @@ import com.dwarfeng.magiprop.model.struct.PropLine;
  * @author  DwArFeng
  * @since 1.8
  */
-public interface PropLineObverser {
+public interface PropLineObverser133 {
 	
 	/**
 	 * 通知视图添加属性标签。

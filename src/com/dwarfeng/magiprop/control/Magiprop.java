@@ -1,9 +1,12 @@
 package com.dwarfeng.magiprop.control;
 
+import java.util.Locale;
+
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 
+import com.dwarfeng.dutil.basic.io.CT;
 import com.dwarfeng.dutil.basic.prog.DefaultVersion;
 import com.dwarfeng.dutil.basic.prog.Version;
 import com.dwarfeng.dutil.basic.prog.VersionType;
@@ -48,7 +51,8 @@ public final class Magiprop {
 	 * @param args the args.
 	 */
 	public static void main(String[] args) {
-		new Magiprop().start();
+		//new Magiprop().start();
+		CT.trace(Locale.JAPANESE);
 	}
 	
 	private final ViewManager viewManager;
