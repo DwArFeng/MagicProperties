@@ -31,6 +31,14 @@ import com.dwarfeng.magiprop.view.obv.ProplineModelObverser;
 public interface ProplineModel extends Name{
 	
 	/**
+	 * 判断模型中是否含有某个语言。
+	 * <p> 当入口参数为 <code>null</code>时，返回 <code>false</code>。
+	 * @param locale 指定的语言。
+	 * @return 模型中是否含有某个语言。
+	 */
+	public boolean contains(Locale locale);
+	
+	/**
 	 * 判断一个语言是不是默认的语言。
 	 * @param locale 指定的语言。
 	 * @return 指定的语言是不是默认的语言。
@@ -64,7 +72,7 @@ public interface ProplineModel extends Name{
 	 * @param index 指定的位置。
 	 * @param propline 指定的属性行。
 	 * @throws IndexOutOfBoundsException 位置越界。
-	 * @throws 入口参数为 <code>null</code>。
+	 * @throws NullPointerException 入口参数为 <code>null</code>。
 	 */
 	public void add(int index, Propline propline);
 	
@@ -86,30 +94,74 @@ public interface ProplineModel extends Name{
 	
 	/**
 	 * 在指定的语言中添加指定位置的属性行。
-	 * <p> 当指定的语言是默认语言时会抛出异常。
+	 * <p> 当指定的语言是默认语言或该模型没有此种时会抛出异常。
 	 * @param locale 指定的语言。
 	 * @param index 指定的位置。
 	 * @param propline 需要被添加的属性行。
 	 * @throws IndexOutOfBoundsException 位置越界。
-	 * @throws IllegalArgumentException 指定的语言为默认语言。
+	 * @throws IllegalArgumentException 指定的语言为默认语言或者模型中没有这个语言。
+	 * @throws NullPointerException 入口参数为 <code>null</code>。
 	 */
 	public void add(Locale locale, int index, Propline propline);
 	
 	/**
-	 * 
-	 * @param locale
-	 * @param index
-	 * @param propline
+	 * 在指定的语言中移除指定位置的属性行。
+	 * <p> 当指定的语言是默认语言或该模型没有此种语言时会抛出异常。
+	 * @param locale 指定的语言。
+	 * @param index 指定的位置。
+	 * @throws IndexOutOfBoundsException 位置越界。
+	 * @throws IllegalArgumentException 指定的语言为默认语言或者模型中没有这个语言。
 	 */
-	public void remove(Locale locale, int index, Propline propline);
+	public void remove(Locale locale, int index);
 	
 	/**
-	 * 
-	 * @param locale
-	 * @param index
-	 * @param propline
+	 * 在指定的语言中设置指定位置的属性行。
+	 * <p> 当指定的语言是默认语言或该模型中没有此种语言时会抛出异常。
+	 * @param locale 指定的语言。
+	 * @param index 指定的位置。
+	 * @param propline 需要被设置的属性行。
+	 * @throws IndexOutOfBoundsException 位置越界。
+	 * @throws IllegalArgumentException 指定的语言为默认语言或者模型中没有这个语言。
+	 * @throws NullPointerException 入口参数为 <code>null</code>。
 	 */
 	public void set(Locale locale, int index, Propline propline);
+	
+	/**
+	 * 向该模型中添加一条语言。
+	 * <p> 当指定的语言为 <code>null</code>时，不对其进行任何操作，并且返回 <code>null</code>。
+	 * <p> 当入口参数为 <code>null</code>时，不对其进行任何操作，并且返回 <code>false</code>。
+	 * @param locale 指定的语言。
+	 * @return 该操作是否改变了模型。
+	 */
+	public boolean addLocale(Locale locale);
+	
+	/**
+	 * 在该模型中移除一条语言。
+	 * <p> 当入口参数为 <code>null</code>时，不对其进行任何操作，并且返回 <code>false</code>。
+	 * <p> 当入口参数为 <code>null</code>时，不对其进行任何操作，并且返回 <code>false</code>。
+	 * @param locale 指定的语言。
+	 * @return 该操作是否改变了模型。
+	 */
+	public boolean removeLocale(Locale locale);
+	
+	/**
+	 * 在该模型中将某一条语言设置成为默认语言。
+	 * <p> 该行为会使被设置的语言放弃原来拥有的属性行列表，转而使用默认的属性行列表。
+	 * <p> 当入口参数为 <code>null</code>时，不对其进行任何操作，并且返回 <code>false</code>。
+	 * @param locale 指定的语言。
+	 * @return 该操作是否改变了模型。
+	 */
+	public boolean addDefaultLocale(Locale locale);
+	
+	/**
+	 * 在该模型中将某一条语言从默认语言中移除。
+	 * <p> 该行为会使得指定的语言从默认语言列表中移除，并且重新拥有一份属于自己的属性行列表，
+	 * 该列表的初始值是默认属性行列表的副本，并且可以修改。
+	 * <p> 当入口参数为 <code>null</code>时，不对其进行任何操作，并且返回 <code>false</code>。
+	 * @param locale 指定的语言。
+	 * @return 该操作是否改变了模型。
+	 */
+	public boolean removeDefaultLocale(Locale locale);
 	
 	
 	/**
