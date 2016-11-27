@@ -14,7 +14,7 @@ package com.dwarfeng.magiprop.model.struct;
  * @author DwArFeng
  * @since 1.8
  */
-public interface PropLine {
+public interface Propline {
 	
 	/**
 	 * 返回属性行的内容。
@@ -33,7 +33,7 @@ public interface PropLine {
 	 * 返回属性行的类型。
 	 * @return 属性行的类型。
 	 */
-	public PropLineType getType();
+	public ProplineType getType();
 	
 	/**
 	 * 返回该属性行对象的键。
@@ -58,7 +58,7 @@ public interface PropLine {
 	
 	/**
 	 * 判断两行属性行是否相等。
-	 * <p> 当且仅当 obj 属于 PropLine 接口且 <code>this.getContent().equals((PropLine) obj) == true</code>时，该方法返回 <code>true</code>。
+	 * <p> 当且仅当 obj 属于 Propline 接口且 <code>this.getContent().equals((Propline) obj) == true</code>时，该方法返回 <code>true</code>。
 	 * @param obj 指定的对象。
 	 * @return 该对象是否与指定的对象相等。
 	 */

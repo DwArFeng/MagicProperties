@@ -2,7 +2,8 @@ package com.dwarfeng.magiprop.model;
 
 import java.util.Objects;
 
-import com.dwarfeng.magiprop.model.struct.PropLineModel;
+import com.dwarfeng.magiprop.model.struct.ProplineModel;
+import com.dwarfeng.magiprop.model.struct.ProplineModel;
 
 /**
  * 模型管理器。
@@ -11,20 +12,20 @@ import com.dwarfeng.magiprop.model.struct.PropLineModel;
  */
 public final class ModelManager {
 	
-	private final PropLineModel propLineModel;
+	private final ProplineModel proplineModel;
 	
-	public ModelManager(PropLineModel propLineModel) {
-		Objects.requireNonNull(propLineModel, "入口参数 propLineModel 不能为 null。");
+	public ModelManager(ProplineModel proplineModel) {
+		Objects.requireNonNull(proplineModel, "入口参数 proplineModel 不能为 null。");
 		
-		this.propLineModel = propLineModel;
+		this.proplineModel = proplineModel;
 		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @return the propLineModel
+	 * @return the proplineModel
 	 */
-	public PropLineModel getPropLineModel() {
-		return propLineModel;
+	public ProplineModel getProplineModel() {
+		return proplineModel;
 	}
 
 }

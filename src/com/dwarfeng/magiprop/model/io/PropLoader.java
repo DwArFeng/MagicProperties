@@ -3,7 +3,7 @@ package com.dwarfeng.magiprop.model.io;
 import java.io.IOException;
 import java.util.List;
 
-import com.dwarfeng.magiprop.model.struct.PropLine;
+import com.dwarfeng.magiprop.model.struct.Propline;
 
 /**
  * 属性读取器。
@@ -17,6 +17,6 @@ public interface PropLoader {
 	 * @return 读取标签。
 	 * @throws IO异常。
 	 */
-	public List<PropLine> loadLabels() throws IOException;
+	public List<Propline> loadLabels() throws IOException;
 
 }

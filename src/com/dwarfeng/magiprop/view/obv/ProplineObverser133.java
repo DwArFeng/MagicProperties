@@ -1,20 +1,20 @@
 package com.dwarfeng.magiprop.view.obv;
 
-import com.dwarfeng.magiprop.model.struct.PropLine;
+import com.dwarfeng.magiprop.model.struct.Propline;
 
 /**
  * 属性标签观察器。
  * @author  DwArFeng
  * @since 1.8
  */
-public interface PropLineObverser133 {
+public interface ProplineObverser133 {
 	
 	/**
 	 * 通知视图添加属性标签。
 	 * @param index 指定的序号。
 	 * @param propLabel 指定的属性标签。
 	 */
-	public void fireAdded(int index, PropLine propLabel);
+	public void fireAdded(int index, Propline propLabel);
 	
 	/**
 	 * 通知视图移除属性标签。
@@ -39,7 +39,7 @@ public interface PropLineObverser133 {
 	 * @param index 指定的序号。
 	 * @param propLabel 指定的属性标签。
 	 */
-	public void fireChanged(int index, PropLine propLabel);
+	public void fireChanged(int index, Propline propLabel);
 	
 	/**
 	 * 通知视图属性标签清空。

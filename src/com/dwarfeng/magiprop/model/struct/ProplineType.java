@@ -5,7 +5,7 @@ package com.dwarfeng.magiprop.model.struct;
  * @author  DwArFeng
  * @since 1.8
  */
-public enum PropLineType {
+public enum ProplineType {
 
 	/**×¢ÊÍ*/
 	COMMENT,

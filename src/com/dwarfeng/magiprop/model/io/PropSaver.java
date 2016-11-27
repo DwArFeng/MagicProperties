@@ -1,6 +1,6 @@
 package com.dwarfeng.magiprop.model.io;
 
-import com.dwarfeng.magiprop.model.struct.PropLine;
+import com.dwarfeng.magiprop.model.struct.Propline;
 
 /**
  *  Ù–‘––±£¥Ê∆˜°£
@@ -14,13 +14,13 @@ public interface PropSaver{
 	 * 
 	 * @param iterable
 	 */
-	public void save(Iterable<PropLine> iterable);
+	public void save(Iterable<Propline> iterable);
 	
 	/**
 	 * 
 	 * @param arr
 	 */
-	public default void save(PropLine[] arr){
+	public default void save(Propline[] arr){
 		//TODO
 	}
 
