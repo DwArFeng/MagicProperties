@@ -2,8 +2,7 @@ package com.dwarfeng.magiprop.model;
 
 import java.util.Objects;
 
-import com.dwarfeng.magiprop.model.struct.ProplineModel;
-import com.dwarfeng.magiprop.model.struct.ProplineModel;
+import com.dwarfeng.magiprop.model.vim.ProplineModel;
 
 /**
  * 模型管理器。

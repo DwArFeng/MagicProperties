@@ -1,4 +1,4 @@
-package com.dwarfeng.magiprop.model.struct;
+package com.dwarfeng.magiprop.model.vim;
 
 import java.util.List;
 import java.util.Locale;
@@ -7,6 +7,7 @@ import java.util.Set;
 import javax.naming.OperationNotSupportedException;
 
 import com.dwarfeng.dutil.basic.str.Name;
+import com.dwarfeng.magiprop.model.struct.Propline;
 import com.dwarfeng.magiprop.view.obv.ProplineModelObverser;
 
 /**

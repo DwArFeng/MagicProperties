@@ -1,9 +1,10 @@
-package com.dwarfeng.magiprop.model.struct;
+package com.dwarfeng.magiprop.model.vim;
 
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
+import com.dwarfeng.magiprop.model.struct.Propline;
 import com.dwarfeng.magiprop.view.obv.ProplineModelObverser;
 
 /**
@@ -12,7 +13,7 @@ import com.dwarfeng.magiprop.view.obv.ProplineModelObverser;
  * @author  DwArFeng
  * @since 1.8
  */
-public class DefaultProplineModel implements ProplineModel {
+public final class DefaultProplineModel implements ProplineModel {
 	
 	
 

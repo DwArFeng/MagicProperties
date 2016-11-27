@@ -1,5 +1,5 @@
 /**
- * 视图模型。
+ * 视图中使用的模型。
  * @author  DwArFeng
  * @since 1.8
  */

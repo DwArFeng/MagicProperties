@@ -6,6 +6,11 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import com.dwarfeng.magiprop.model.vim.ProplineModel;
+
+import javax.swing.JComboBox;
+import javax.swing.JButton;
+
 /**
  * 属性行面板。
  * <p> 该面板用来显示属性文件的属性行。
@@ -16,6 +21,12 @@ public final class ProplinePanel extends JPanel {
 	
 	private final JList labelList;
 	private final JList indexList;
+	private final JComboBox comboBox;
+	private final JPanel panel;
+	private final JButton btnNewButton;
+	
+	private ProplineModel model;
+
 
 	/**
 	 * Create the panel.
@@ -24,6 +35,9 @@ public final class ProplinePanel extends JPanel {
 
 		labelList = new JList();
 		indexList = new JList();
+		comboBox = new JComboBox<>();
+		panel = new JPanel();
+		btnNewButton = new JButton("...");	//TODO 以后改成图标
 		
 		init();
 	}
@@ -37,6 +51,13 @@ public final class ProplinePanel extends JPanel {
 		scrollPane.setViewportView(labelList);
 		
 		scrollPane.setRowHeaderView(indexList);
+		
+		add(panel, BorderLayout.NORTH);
+		panel.setLayout(new BorderLayout(0, 0));
+		
+		panel.add(comboBox, BorderLayout.CENTER);
+		
+		panel.add(btnNewButton, BorderLayout.EAST);
 	}
 
 }

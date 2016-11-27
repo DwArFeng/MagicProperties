@@ -11,6 +11,8 @@ import com.dwarfeng.dutil.basic.prog.DefaultVersion;
 import com.dwarfeng.dutil.basic.prog.Version;
 import com.dwarfeng.dutil.basic.prog.VersionType;
 import com.dwarfeng.magiprop.model.ModelManager;
+import com.dwarfeng.magiprop.model.vim.DefaultProplineModel;
+import com.dwarfeng.magiprop.model.vim.ProplineModel;
 import com.dwarfeng.magiprop.view.ViewManager;
 
 /**
@@ -69,8 +71,10 @@ public final class Magiprop {
 			//由于程序中所有的组件都支持这一外观，因此不可能抛出该异常。
 		}
 
+		ProplineModel proplineModel = new DefaultProplineModel();
+		
 		this.modelManager = new ModelManager(
-				
+				proplineModel
 		);
 		this.viewManager = new ViewManager(
 				
@@ -95,7 +99,7 @@ public final class Magiprop {
 	 * @throws IllegalStateException 程序在还未开始启动时或已经结束时调用此方法。
 	 */
 	public void exit(){
-		
+		//TODO
 	}
 	
 	
@@ -110,7 +114,7 @@ public final class Magiprop {
 		//已经退出
 		EXITED,
 		//已经崩溃
-		CRASH,
+		CRASHED,
 	}
 
 }
