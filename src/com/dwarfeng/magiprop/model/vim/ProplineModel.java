@@ -8,6 +8,7 @@ import javax.naming.OperationNotSupportedException;
 
 import com.dwarfeng.dutil.basic.str.Name;
 import com.dwarfeng.magiprop.model.struct.Propline;
+import com.dwarfeng.magiprop.view.obv.ObverserSet;
 import com.dwarfeng.magiprop.view.obv.ProplineModelObverser;
 
 /**
@@ -29,7 +30,7 @@ import com.dwarfeng.magiprop.view.obv.ProplineModelObverser;
  * @author  DwArFeng
  * @since 1.8
  */
-public interface ProplineModel extends Name{
+public interface ProplineModel extends ObverserSet<ProplineModelObverser>{
 	
 	/**
 	 * 判断模型中是否含有某个语言。
@@ -163,23 +164,5 @@ public interface ProplineModel extends Name{
 	 * @return 该操作是否改变了模型。
 	 */
 	public boolean removeDefaultLocale(Locale locale);
-	
-	
-	/**
-	 * 向属性行模型中添加观察器。
-	 * @param obverser 指定的观察器。
-	 */
-	public void addObverser(ProplineModelObverser obverser);
-	
-	/**
-	 * 从属性行模型中移除观察器。
-	 * @param obverser 指定的观察器。
-	 */
-	public void removeObverser(ProplineModelObverser obverser);
-	
-	/**
-	 * 从属性行模型中移除所有观察器。
-	 */
-	public void clearObverser();
 	
 }

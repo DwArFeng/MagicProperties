@@ -14,20 +14,12 @@ import com.dwarfeng.magiprop.view.obv.ProplineModelObverser;
  * @since 1.8
  */
 public final class DefaultProplineModel implements ProplineModel {
-	
-	
 
 	/**
 	 * 生成一个新的实例。
 	 */
 	public DefaultProplineModel() {
 		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
@@ -121,21 +113,27 @@ public final class DefaultProplineModel implements ProplineModel {
 	}
 
 	@Override
-	public void addObverser(ProplineModelObverser obverser) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void removeObverser(ProplineModelObverser obverser) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void clearObverser() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public Set<ProplineModelObverser> getObversers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addObverser(ProplineModelObverser obverser) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeObverser(ProplineModelObverser obverser) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

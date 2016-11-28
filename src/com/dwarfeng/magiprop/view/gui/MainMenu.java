@@ -1,9 +1,16 @@
 package com.dwarfeng.magiprop.view.gui;
 
-import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 
-public class MainMenu extends JMenu {
+/**
+ * Ö÷²Ëµ¥¡£
+ * @author DwArFeng
+ * @since 1.8
+ */
+final class MainMenu extends JMenuBar {
 	
+	private MainMenu() {
+		
+	}
 	
-
 }

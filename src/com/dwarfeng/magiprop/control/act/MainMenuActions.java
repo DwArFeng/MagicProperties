@@ -6,5 +6,5 @@ package com.dwarfeng.magiprop.control.act;
  * @since 1.8
  */
 public interface MainMenuActions {
-
+	
 }
